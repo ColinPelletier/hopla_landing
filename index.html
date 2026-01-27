@@ -1,13 +1,164 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <title>Coming soon</title>
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hop La — En construction</title>
+  <meta name="description" content="Hop La — plateforme d'entraide entre particuliers 100% suisse. Site en construction." />
+
+  <style>
+    :root{
+      --bg-overlay: rgba(0,0,0,.55);
+      --bg-overlay-2: rgba(0,0,0,.35);
+      --text: #fff;
+      --muted: rgba(255,255,255,.85);
+      --chip: rgba(255,255,255,.16);
+      --chip-border: rgba(255,255,255,.22);
+      --shadow: 0 18px 50px rgba(0,0,0,.35);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color: var(--text);
+      background: #000;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: hidden;
+
+      /* ✅ Replace this URL with your own background image */
+      background-image:
+        linear-gradient(180deg, var(--bg-overlay), var(--bg-overlay-2)),
+        url("./hopla_landing.png");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .card {
+      width: min(920px, 92vw);
+      padding: clamp(20px, 4vw, 44px);
+      border-radius: 24px;
+      background: rgba(0,0,0,.22);
+      border: 1px solid rgba(255,255,255,.18);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    .topline {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: var(--chip);
+      border: 1px solid var(--chip-border);
+      color: rgba(255,255,255,.95);
+      font-weight: 600;
+      letter-spacing: .2px;
+    }
+
+    .icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.18);
+      font-size: 26px;
+    }
+
+    h1 {
+      margin: 10px 0 8px;
+      font-size: clamp(30px, 4.2vw, 54px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+
+    .lead {
+      margin: 0 0 18px;
+      font-size: clamp(16px, 1.8vw, 20px);
+      line-height: 1.5;
+      color: var(--muted);
+      max-width: 60ch;
+    }
+
+    .sub {
+      margin: 0;
+      font-size: clamp(15px, 1.6vw, 18px);
+      line-height: 1.5;
+      color: rgba(255,255,255,.8);
+    }
+
+    .divider {
+      height: 1px;
+      background: rgba(255,255,255,.18);
+      margin: 18px 0 16px;
+    }
+
+    .footer {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+      color: rgba(255,255,255,.75);
+      font-size: 14px;
+    }
+
+    .link {
+      color: rgba(255,255,255,.9);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,.35);
+      padding-bottom: 2px;
+    }
+    .link:hover { border-bottom-color: rgba(255,255,255,.7); }
+  </style>
 </head>
-<body style="font-family: sans-serif; text-align: center; padding: 4rem;">
-  <h1>Hopla is coming soon 🚀</h1>
-  <p>We are currently working on the platform.</p>
-  <p>Stay tuned.</p>
+
+<body>
+  <main class="hero" role="main" aria-label="Hop La - Site en construction">
+    <section class="card">
+      <div class="topline">
+        <div class="icon" aria-hidden="true">🚧</div>
+        <div class="chip">Site en construction — lancement prochainement</div>
+      </div>
+
+      <h1>Bienvenue sur Hop La, votre plateforme d’entraide entre particuliers 100% suisse&nbsp;!</h1>
+
+      <p class="lead">
+        Besoin d’un service ou envie de proposer le vôtre ? Hop La vous met en relation.
+      </p>
+
+      <div class="divider"></div>
+
+      <p class="sub">
+        Notre site est actuellement en cours de création. Nous serons ravis de vous aider très bientôt.
+      </p>
+
+      <div class="footer">
+        <span>🇨🇭 Berne • Jura • Neuchâtel</span>
+        <!-- Optional: add a contact link, or remove this line -->
+        <span>Une question ? <a class="link" href="mailto:contact@hopla-service.ch">Contactez-nous</a></span>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
